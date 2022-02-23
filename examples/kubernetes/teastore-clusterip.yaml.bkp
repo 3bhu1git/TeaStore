@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-db
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-db
     spec:
       containers:
@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: teastore-db
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-db
 spec:
   ports:
@@ -40,12 +40,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-registry
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-registry
     spec:
       containers:
@@ -59,7 +59,7 @@ kind: Service
 metadata:
   name: teastore-registry
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-registry
 spec:
   ports:
@@ -75,12 +75,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-persistence
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-persistence
     spec:
       containers:
@@ -103,7 +103,7 @@ kind: Service
 metadata:
   name: teastore-persistence
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-persistence
 spec:
   ports:
@@ -119,12 +119,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-auth
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-auth
     spec:
       containers:
@@ -143,7 +143,7 @@ kind: Service
 metadata:
   name: teastore-auth
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-auth
 spec:
   ports:
@@ -159,12 +159,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-image
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-image
     spec:
       containers:
@@ -183,7 +183,7 @@ kind: Service
 metadata:
   name: teastore-image
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-image
 spec:
   ports:
@@ -199,12 +199,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-recommender
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-recommender
     spec:
       containers:
@@ -223,7 +223,7 @@ kind: Service
 metadata:
   name: teastore-recommender
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-recommender
 spec:
   ports:
@@ -239,12 +239,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: aksteastore
+      app: teastore
       run: teastore-webui
   template:
     metadata:
       labels:
-        app: aksteastore
+        app: teastore
         run: teastore-webui
     spec:
       containers:
@@ -263,13 +263,13 @@ kind: Service
 metadata:
   name: teastore-webui
   labels:
-    app: aksteastore
+    app: teastore
     run: teastore-webui
 spec:
   type: LoadBalancer
   ports:
     - port: 8080
-      nodePort: 30050
+      nodePort: 30070
       protocol: TCP
   selector:
     run: teastore-webui
